@@ -1,0 +1,11 @@
+package me.Timoshiii.MMplugin;
+
+import org.bukkit.event.Listener;
+
+public class PlayerListener implements Listener {
+	public Main plugin;
+	
+	public PlayerListener(Main instance){
+		plugin = instance;
+	}
+}

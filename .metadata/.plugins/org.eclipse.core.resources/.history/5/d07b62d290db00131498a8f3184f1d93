@@ -1,0 +1,15 @@
+package me.Timoshiii.MMplugin;
+
+import org.bukkit.plugin.java.JavaPlugin;
+
+public class Main extends JavaPlugin {
+
+	public void onEnable(){
+		getLogger().info("Map Makers Plugin now enabled.");
+	}
+	
+	public void onDisable(){
+		getLogger().info("Map Makers Plugin now disabled.");
+	}
+
+}

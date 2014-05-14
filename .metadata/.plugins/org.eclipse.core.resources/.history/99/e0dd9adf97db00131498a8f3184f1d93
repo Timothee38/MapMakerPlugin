@@ -1,0 +1,42 @@
+# +----------------------------------------------------+ #
+# |                   Heads Messages                   | #
+# +----------------------------------------------------+ #
+
+# Console sender
+console-msg: "You must be in game!"
+
+# Permissions message
+permissions: "You don't have enough permissions!"
+
+# Command usage
+command-usage: "Type: /head [nick]"
+
+# Unknown command
+unknown-cmd: "Type: /heads help"
+
+# Head added
+head-added: "%head% head added to your inventory"
+
+# Player not found
+player-offline: "Player %player% not found !"
+
+# When player give head
+head-given: "You've just given %player% a head !"
+
+# When player receive head
+head-received : "You've just received %owner% head !"
+
+# Skull info
+skull-info: "This head belongs to %owner%"
+
+# Not skull block
+not-skull: "This block is not a skull !"
+
+# Files reloaded
+reloaded: "Files reloaded !"
+
+# Current plugin version
+plugin-version: "Plugin Version: %version%"
+
+# Plugin outdated
+update-msg: "New plugin version is available: %version%"

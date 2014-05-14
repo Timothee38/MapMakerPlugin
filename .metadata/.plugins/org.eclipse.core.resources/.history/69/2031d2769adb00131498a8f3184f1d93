@@ -1,0 +1,39 @@
+package me.Timoshiii.MMplugin;
+
+import org.bukkit.ChatColor;
+import org.bukkit.Material;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.PlayerInventory;
+import org.bukkit.inventory.meta.SkullMeta;
+import org.bukkit.plugin.java.JavaPlugin;
+
+public class Main extends JavaPlugin {
+	@Override
+	public void onEnable(){
+		getLogger().info("Map Makers Plugin now enabled.");
+	}
+	@Override
+	public void onDisable(){
+		getLogger().info("Map Makers Plugin now disabled.");
+	}
+
+	public boolean onCommand(CommandSender sender,Command cmd, String commandlabel, String[] args){
+		if(commandlabel.equalsIgnoreCase("mmh")){
+			Player player = (Player) sender;
+			if(args.length == 0){
+				player.sendMessage("Uncompleted syntaxe. usage: /mmh [player username]");
+			}
+			else if(args.length == 1){
+				ItemStack skull = new ItemStack(Material.SKULL_ITEM, 1);
+				SkullMeta meta = (SkullMeta) skull.getItemMeta();
+				meta.setOwner("Timothee38");
+				skull.setItemMeta(meta);
+				player.getInventory().addItem(skull);
+			}
+		}
+		return false;
+	}
+}

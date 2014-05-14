@@ -1,0 +1,2 @@
+INDEX VERSION 1.126+C:\Users\Timothee\Documents\GitHub\MapMakerPlugin\.metadata\.plugins\org.eclipse.jdt.core
+3179799422.index

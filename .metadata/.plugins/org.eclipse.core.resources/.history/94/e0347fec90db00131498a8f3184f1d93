@@ -1,0 +1,19 @@
+package me.Timoshiii.MMplugin;
+
+import net.minecraft.server.v1_7_R1.PlayerList;
+
+import org.bukkit.Bukkit;
+import org.bukkit.entity.Player;
+import org.bukkit.plugin.java.JavaPlugin;
+
+public class Main extends JavaPlugin {
+	@Override
+	public void onEnable(){
+		getLogger().info("Map Makers Plugin now enabled.");
+	}
+	@Override
+	public void onDisable(){
+		getLogger().info("Map Makers Plugin now disabled.");
+	}
+
+}

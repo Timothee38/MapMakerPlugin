@@ -1,0 +1,26 @@
+package me.Timoshiii.MMplugin;
+
+import org.bukkit.ChatColor;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandSender;
+import org.bukkit.plugin.java.JavaPlugin;
+
+public class Main extends JavaPlugin {
+	public final PlayerListener pl = new PlayerListener(this);
+	@Override
+	public void onEnable(){
+		getLogger().info("Map Makers Plugin now enabled.");
+		this.getServer().getPluginManager().registerEvents(this.pl, this);
+	}
+	@Override
+	public void onDisable(){
+		getLogger().info("Map Makers Plugin now disabled.");
+	}
+
+	public boolean onCommand(CommandSender sender,Command cmd, String commandlabel, String[] args){
+		if(commandlabel.equalsIgnoreCase("mmh")){
+			sender.sendMessage(ChatColor.DARK_AQUA + "test");
+		}
+		return false;
+	}
+}

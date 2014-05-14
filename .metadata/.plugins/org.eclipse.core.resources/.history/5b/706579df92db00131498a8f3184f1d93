@@ -1,0 +1,9 @@
+name: MM-plugin
+main: me.Timoshiii.MMplugin.Main
+version: 1.0
+commands:
+   basic:
+      description: Use this command to give yourself a player's head.
+      usage: /mmh [player username]
+      permission: mmhead.head
+      permission-message: You don't have <permission>
