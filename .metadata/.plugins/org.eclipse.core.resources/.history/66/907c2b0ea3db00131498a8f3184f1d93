@@ -1,0 +1,67 @@
+package me.Timoshiii.MMplugin;
+
+import java.util.ArrayList;
+
+import org.bukkit.ChatColor;
+import org.bukkit.Material;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.inventory.meta.SkullMeta;
+import org.bukkit.plugin.java.JavaPlugin;
+
+public class Main extends JavaPlugin {
+	@Override
+	public void onEnable(){
+		getLogger().info("Map Makers Plugin now enabled.");
+	}
+	@Override
+	public void onDisable(){
+		getLogger().info("Map Makers Plugin now disabled.");
+	}
+
+	@SuppressWarnings("deprecation")
+	public boolean onCommand(CommandSender sender,Command cmd, String commandlabel, String[] args){
+		if(commandlabel.equalsIgnoreCase("mmh")){
+			Player player = (Player) sender;
+			if(args.length == 0){
+				player.sendMessage("Uncompleted syntaxe. usage: /mmh [player username]");
+			}
+			else if(args.length == 1){
+				ItemStack skull = new ItemStack(397, 1, (short) 3);
+				SkullMeta meta = (SkullMeta) skull.getItemMeta();
+				meta.setOwner(args[0]);
+				skull.setItemMeta(meta);
+				player.getInventory().addItem(skull);
+				player.sendMessage(ChatColor.DARK_AQUA + "Given " + args[0] + "'s head.");
+			}
+
+				
+			}
+		else if(commandlabel.equalsIgnoreCase("mmk")){
+			Player player = (Player) sender;
+			//wand
+			ItemStack wand = new ItemStack(Material.WOOD_AXE, 1);
+			ItemMeta meta = wand.getItemMeta();
+			meta.setDisplayName(ChatColor.YELLOW + "Wand");
+			ArrayList<String> description = new ArrayList<String>();
+			description.add(ChatColor.DARK_RED + "Use me with world edit.");
+			meta.setLore(description);
+			wand.setItemMeta(meta);
+			
+			//Compass
+			ItemStack item = new ItemStack(Material.COMPASS, 1);
+			ItemMeta meta1 = item.getItemMeta();
+			meta1.setDisplayName(ChatColor.YELLOW + "Compass");
+			ArrayList<String> description1 = new ArrayList<String>();
+			description1.add(ChatColor.DARK_RED + "Use me to teleport.");
+			meta1.setLore(description1);
+			item.setItemMeta(meta1);
+			
+			player.getInventory().addItem(wand, item);
+		}
+		return true;
+	}
+}

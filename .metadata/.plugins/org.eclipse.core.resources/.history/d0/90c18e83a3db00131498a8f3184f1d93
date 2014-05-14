@@ -1,0 +1,10 @@
+name: MM-plugin
+main: me.Timoshiii.MMplugin.Main
+version: 1.0
+commands:
+   mmh:
+      description: Use this command to give yourself a player's head.
+      usage: /mmh [player username]
+   mmk:
+      description: Use this command to give yourself the map maker's kit.
+      usage: /mmk
