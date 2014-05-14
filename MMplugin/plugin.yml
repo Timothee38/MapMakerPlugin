@@ -5,5 +5,9 @@ commands:
    mmh:
       description: Use this command to give yourself a player's head.
       usage: /mmh [player username]
-      permission: mmhead.head
-      permission-message: You don't have <permission>
+   mmk:
+      description: Use this command to give yourself the map maker's kit.
+      usage: /mmk
+   mmc:
+      description: Clears out your inventory.
+      usage: /mmc
