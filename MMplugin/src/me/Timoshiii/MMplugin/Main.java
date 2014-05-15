@@ -16,11 +16,11 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class Main extends JavaPlugin {
 	@Override
 	public void onEnable(){
-		getLogger().info("Map Makers Plugin now enabled.");
+		getLogger().info("Map Makers Plugin is now enabled.");
 	}
 	@Override
 	public void onDisable(){
-		getLogger().info("Map Makers Plugin now disabled.");
+		getLogger().info("Map Makers Plugin is now disabled.");
 	}
 
 	@SuppressWarnings("deprecation")
@@ -28,7 +28,7 @@ public class Main extends JavaPlugin {
 		if(commandlabel.equalsIgnoreCase("mmh")){
 			Player player = (Player) sender;
 			if(args.length == 0){
-				player.sendMessage("Uncompleted syntaxe. usage: /mmh [player username]");
+				player.sendMessage("Incorrect syntax. Usage: /mmh [player username]");
 			}
 			else if(args.length == 1){
 				ItemStack skull = new ItemStack(397, 1, (short) 3);
