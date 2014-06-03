@@ -2,6 +2,9 @@ name: MM-plugin
 main: me.Timoshiii.MMplugin.Main
 version: 1.0
 commands:
+   mm:
+      description: Use this to open the main menu for Map Maker plugin!
+      usage: /mm
    mmh:
       description: Use this command to give yourself a player's head.
       usage: /mmh [player username]
