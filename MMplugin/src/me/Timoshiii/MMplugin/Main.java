@@ -69,7 +69,7 @@ public class Main extends JavaPlugin implements Listener {
         ItemMeta woolmeta = clear.getItemMeta();
         woolmeta.setDisplayName(ChatColor.YELLOW + "Clear Inventory");
         ArrayList<String> wooldescription = new ArrayList<>();
-        wooldescription.add(ChatColor.DARK_RED + "Clear your inventoru.");
+        wooldescription.add(ChatColor.DARK_RED + "Clear your inventory.");
         woolmeta.setLore(wooldescription);
         clear.setItemMeta(woolmeta);
         mm.addItem(clear);
